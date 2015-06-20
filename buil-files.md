@@ -17,8 +17,12 @@
 </project>
 ```
 
-注意到上面的练习中，在 xml 文件的声明前面没有任何空行或者空格。如果你在写 xml 文件的声明时加入了空行或者空格，执行 ant -build 操作时，将会出现下面的错误信息：
-The processing instruction target matching "[xX][mM][lL]" is not allowed. 
+注意到上面的练习中，在 xml 文件的声明前面没有任何空行或者空格。如果你在写 xml 文件的声明时加入了空行或者空格，执行 ant -build 操作时，将会出现下面的错误信息：  
+
+```
+The processing instruction target matching "[xX][mM][lL]" is not allowed.
+```  
+
 错误信息的意思是：处理指令目标匹配"[xX][mM][lL]" 不被允许。所有的构建文件需要包含项目元素（project标签）和至少一个目标元素（target标签）。
 
 构建文件的项目元素<project>有3个属性：
