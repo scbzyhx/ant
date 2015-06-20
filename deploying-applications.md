@@ -153,7 +153,7 @@ tomcat.manager.password=secret
 在 Tomcat 中的应用程序能通过使用 Tomcat 管理应用程序进行启动和停止。管理应用程序的统一资源定位器（URL），用户名和密码也在 build.properties 文件夹中进行指定。 接下来，我们声明一个新的 CLASSPATH 来包含 **catalina-ant.jar**。 若要通过 Apache Ant 来运行 Tomcat， 这个 jar 文件是必须的。
 
 catalina-ant.jar 提供了下述的任务：
-<table border="1">
+<table>
   <tr>
     <th>属性</th>
     <th>描述</th>
