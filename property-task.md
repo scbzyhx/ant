@@ -1,12 +1,13 @@
-# Ant - 属性任务
+# 属性任务
 
 
 Ant 构建文件是用 XML 编写的，它不能像你喜欢的编程语言那样去声明变量。然而，正如你可能已经想到的，如果允许 Ant 声明变量，如项目名称，项目源目录等，这将是非常有用的。
  
- Ant 使用**属性（property）**元素来让你能够具体说明属性。这就允许这些属性能够在不同的构建和不同的环境下发生改变。
+Ant 使用**属性 (property)** 元素来让你能够具体说明属性。这就允许这些属性能够在不同的构建和不同的环境下发生改变。
 
-默认情况下， Ant 提供以下预定义的属性，这些属性都是可以在构建文件中使用的：
-<table border="1">
+默认情况下，Ant 提供以下预定义的属性，这些属性都是可以在构建文件中使用的：  
+
+<table>
   <tr>
     <th>属性</th>
     <th>解释</th>
@@ -21,7 +22,7 @@ Ant 构建文件是用 XML 编写的，它不能像你喜欢的编程语言那�
   </tr>
     <tr>
     <td>basedir</td>
-    <td>构建文件的基目录的绝对路径，作为**project**元素的**basedir**属性</td>
+    <td>构建文件的基目录的绝对路径，作为 **project** 元素的 **basedir** 属性</td>
   </tr>
     <tr>
     <td>ant.java.version</td>
@@ -29,7 +30,7 @@ Ant 构建文件是用 XML 编写的，它不能像你喜欢的编程语言那�
   </tr>
     <tr>
     <td>ant.project.name</td>
-    <td>项目的名字，具体声明为**project**元素的**name**属性</td>
+    <td>项目的名字，具体声明为 **project** 元素的 **name** 属性</td>
   </tr>
     <tr>
     <td>ant.project.default-target</td>
@@ -51,11 +52,11 @@ Ant 构建文件是用 XML 编写的，它不能像你喜欢的编程语言那�
   </tr>
 </table>
 
-Ant 也确保系统属性在构建文件中可用，如 file.separator 。
+Ant 也确保系统属性在构建文件中可用，如 file.separator。
 
-除了上述内容以外，用户也可以使用  property 元素定义一些额外的属性。下面的例子就演示了怎样去定义一个叫做 sitename 的属性：
+除了上述内容以外，用户也可以使用 property 元素定义一些额外的属性。下面的例子就演示了怎样去定义一个叫做 sitename 的属性：
 
-``` java
+```
 <?xml version="1.0"?>
 <project name="Hello World Project" default="info">
 
@@ -69,7 +70,7 @@ Ant 也确保系统属性在构建文件中可用，如 file.separator 。
 
 在上述的构建文件下运行 Ant 可以产生以下输出：
 
-``` java
+```
 C:\>ant
 Buildfile: C:\build.xml
 
