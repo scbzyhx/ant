@@ -11,7 +11,7 @@
   - [生成 WAR 文件](creating-war-files.md)
   - [封装应用](packaging-applications.md)
   - [部署应用](deploying-applications.md)
-  - [执行 Java 代码](excuting-java-code.md)
+  - [执行 Java 代码](executing-java-code.md)
   - [Eclipse 集成](eclipse-integration.md)
   - [JUnit 集成](junit-integration.md)
   - [扩展 Ant](extending-ant.md)
