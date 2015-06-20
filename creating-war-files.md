@@ -61,7 +61,7 @@ WEB-INF/lib 文件夹中存储了来自于第三方 jar 文件夹中的 jar 文�
 
 要执行 war 任务，将其封装在一个目标里面，最常见的是，构建目标或者是包目标，然后运行它们。
 
-``` java
+```
 <target name="build-war">
 
    <war destfile="fax.war" webxml="${web.dir}/web.xml">
@@ -83,14 +83,17 @@ WEB-INF/lib 文件夹中存储了来自于第三方 jar 文件夹中的 jar 文�
 
 下述的输出就是运行 Ant 文件的结果：
 
+```
 >C:\>ant build-war
 >Buildfile: C:\build.xml
 
 >BUILD SUCCESSFUL
 >Total time: 12.3 seconds
+```
 
 该 fax.war 文件当前被放置在输出文件夹中。war 文件的内容如下所示：
 
+```
 >fax.war:
    >+---jsp	：这个文件夹包含了 jsp 文件
    >+---css ：这个文件夹包含了 stylesheet 文件
@@ -101,3 +104,4 @@ WEB-INF/lib 文件夹中存储了来自于第三方 jar 文件夹中的 jar 文�
 		   >+---classes ：这个文件夹包含了编译好的类
 	      >+---lib ：第三方库和使用程序 jar 文件
 	      >WEB.xml ：定义 WAR 包的配置文件 
+```
