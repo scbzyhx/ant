@@ -1,12 +1,12 @@
-# Ant - 创建 WAR 文件
+# 创建 WAR 文件
 
-使用 Ant 创建 WAR 文件是极其简单的。这与创建  JAR 文件任务非常类似。 毕竟，WAR 文件与 JAR 文件只是两种不同的 ZIP 文件。
+使用 Ant 创建 WAR 文件是极其简单的。这与创建 JAR 文件任务非常类似。 毕竟，WAR 文件与 JAR 文件只是两种不同的 ZIP 文件。
 
 WAR 任务是 JAR 任务的一个扩展，但是其对控制哪些文件进入 WEB-INF/classes 文件夹和生成 web.xml 文件进行了一些很好的补充。WAR 任务对指定 WAR 文件布局是非常有用的。
 
 既然 WAR 任务是 JAR 任务的一个扩展，JAR 任务的所有的属性都适用于 WAR 任务。
 
-<table border="1">
+<table>
   <tr>
     <th>属性</th>
     <th>描述</th>
@@ -31,7 +31,7 @@ WAR 任务是 JAR 任务的一个扩展，但是其对控制哪些文件进入 W
 
 继续我们的 **Hello World** 传真应用项目，让我们添加一个新的目标来生成 jar 文件。 但是在此之前，我们需要考虑一下 war 任务。 请看下面的例子：
 
-``` java
+```
 <war destfile = "fax.war" webxml = "${web.dir}/web.xml">
 
    <fileset dir = "${web.dir}/WebContent">
@@ -47,20 +47,19 @@ WAR 任务是 JAR 任务的一个扩展，但是其对控制哪些文件进入 W
 </war>
 ```
 
-按照前面的例子中，web.dir 变量指向源 web 文件夹， 即该文件包含 JSP， css 和 javascript 文件等等。
+按照前面的例子中，web.dir 变量指向源 web 文件夹，即该文件包含 JSP，css 和 javascript 文件等等。
 
 该 build.dir 变量指向输出文件夹，WAR 的包能在该文件夹下找到。 通常情况下， 类将被绑定到 WAR 文件下的 WEB-INF/classes 文件夹下。
 
 在这个例子中，我们创建了一个名为 fax.war 的 war 文件。WEB.XML 文件可以从 web 源文件中获取。 所有 web 下来自 “WebContent” 的文件都被复制到 WAR 文件中。
 
-WEB-INF/lib 文件夹中填充了来自于第三方 jar 文件夹中的 jar 文件。但是，我们排除了 portlet.jar，因为该 jar 文件已经存在于应用服务器的 lib 文件夹中了。 最后，我们从一个构建目录下的 web 文件夹中复制所有的类，并将复制的类全部放入 WEB-INF/classes 文件夹下。
+WEB-INF/lib 文件夹中存储了来自于第三方 jar 文件夹中的 jar 文件。但是，我们排除了 portlet.jar，因为该 jar 文件已经存在于应用服务器的 lib 文件夹中了。最后，我们从一个构建目录下的 web 文件夹中复制所有的类，并将复制的类全部放入 WEB-INF/classes 文件夹下。
 
 将一个 war 任务封装到一个 Ant 任务中并运行它。 这将在指定位置创建一个 WAR 文件。
 
 类，库，metainf 和 webinf 目录完全可以进行嵌套以使得他们都能存在于项目结构下分散的文件夹中。 但是最佳的实践建议是，你的 web 项目的 web 内容架构应该与 WAR 文件类似。 传真应用项目的架构就是使用了这个基本原理。
 
 要执行 war 任务，将其封装在一个目标里面，最常见的是，构建目标或者是包目标，然后运行它们。
-
 
 ``` java
 <target name="build-war">
