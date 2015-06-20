@@ -1,12 +1,11 @@
-# Ant - 部署应用程序
+# 部署应用程序
 
 在之前的章节中，我们已经学会了如何去打包一个应用程序以及怎样将其部署到一个文件夹中。
 
 在这个章节中，我们将要直接将 web 应用程序部署到一个应用服务器的部署文件夹中。随后，我们将添加一些 Ant 目标来启动和停止服务。让我们继续 Hello World 传真 web 应用程序。 这一章节是对之前的章节的一个延续，所有新的组件会用粗体突出显示。
 
-
 ##build.properties
-``` java
+```
 # Ant properties for building the springapp
 
 appserver.home=c:\\install\\apache-tomcat-7.0.19
@@ -20,10 +19,9 @@ tomcat.manager.url=http://www.tutorialspoint.com:8080/manager
 tomcat.manager.username=tutorialspoint
 tomcat.manager.password=secret
 ```
+## build.xml
 
-##build.xml
-
-``` java
+```
 <?xml version="1.0"?>
 
 <project name="fax" basedir="." default="usage">
@@ -111,7 +109,7 @@ tomcat.manager.password=secret
    </target>
 ```
 
-``` java
+```
 <!-- ============================================================ -->
 <!-- Tomcat tasks -->
 <!-- ============================================================ -->
@@ -152,7 +150,7 @@ tomcat.manager.password=secret
 <li>**appserver.lib** 指向 Tomcat 服务器的安装文件下的库文件。</li>
 <li>**deploy.path** 变量当前指向 Tomcat 的 web 应用程序文件夹。</li>
 
-在 Tomcat 中的应用程序能通过使用 Tomcat 管理应用程序进行启动和停止。管理应用程序的统一资源定位器（URL），用户名和密码也在 build.properties 文件夹中进行指定。 接下来，我们声明一个新的 CLASSPATH来包含**catalina-ant.jar** 。 若要通过 Apache Ant 来运行 Tomcat， 这个 jar 文件是必须的。
+在 Tomcat 中的应用程序能通过使用 Tomcat 管理应用程序进行启动和停止。管理应用程序的统一资源定位器（URL），用户名和密码也在 build.properties 文件夹中进行指定。 接下来，我们声明一个新的 CLASSPATH 来包含 **catalina-ant.jar**。 若要通过 Apache Ant 来运行 Tomcat， 这个 jar 文件是必须的。
 
 catalina-ant.jar 提供了下述的任务：
 <table border="1">
@@ -192,8 +190,9 @@ catalina-ant.jar 提供了下述的任务：
 <li>重启 web 应用程序的密码</li>
 <li>重启的 web 应用程序的名字</li>
 
-让我们发出部署 war （ **deploy-war** ）的命令来复制 web 应用程序到 Tomcat 的 webapps 文件夹中。同时，我们重新加载传真 web 应用程序。下述的输出是运行 Ant 文件的结果。
+让我们发出部署 war (**deploy-war**)的命令来复制 web 应用程序到 Tomcat 的 webapps 文件夹中。同时，我们重新加载传真 web 应用程序。下述的输出是运行 Ant 文件的结果。
 
+```
 >C:\>ant deploy-war
 >Buildfile: C:\build.xml
 
@@ -205,5 +204,6 @@ catalina-ant.jar 提供了下述的任务：
 
 >BUILD SUCCESSFUL
 >Total time: 3.1 seconds
+```  
 
 一旦上述的任务被运行，web 应用程序就是已经被部署好且重新加载了的。
