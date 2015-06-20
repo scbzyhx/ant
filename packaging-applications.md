@@ -1,10 +1,10 @@
-﻿#Ant - 封装应用
+﻿# 封装应用
 
 我们通过 **Hello World** 传真应用，已经琐碎地学习了 Ant 的不同方面的知识了。
 
 现在是时候把我们所学的知识都运用起来创建一个全面和完整的 build.xml 文件了。考虑下面给出的 **build.properties** 和 **build.xml** 文件：
 
-##build.properties
+## build.properties
 
 ```
 eploy.path = c:\tomcat6\webapps
