@@ -1,4 +1,4 @@
-# 环境配置
+# 环境搭建
 
 Apache Ant 是 Apache 软件许可证下发布的。Apache 是一个由一个开源机构认证的完全成熟的开源许可证。
 Apache Ant 最新的版本包括了以下的部分：完整的源代码， 类文件和文档，这些内容都可以在[ http://ant.apache.org](https://zh.wikipedia.org/wiki/Markdown)上面找到。

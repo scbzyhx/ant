@@ -1,4 +1,4 @@
-- [引言](introduction.md)
+- [介绍](introduction.md)
 - [环境搭建](environment-setup.md)
 - [构建文件](build-files.md)
 - [属性任务](property-task.md)
