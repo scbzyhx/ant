@@ -1,6 +1,6 @@
-﻿# 封装应用
+# 封装应用
 
-我们通过 **Hello World** 传真应用，已经琐碎地学习了 Ant 的不同方面的知识了。
+我们通过 **Hello World Fax** Web 应用，已经琐碎地学习了 Ant 的不同方面的知识了。
 
 现在是时候把我们所学的知识都运用起来创建一个全面和完整的 build.xml 文件了。考虑下面给出的 **build.properties** 和 **build.xml** 文件：
 
@@ -10,7 +10,7 @@
 eploy.path = c:\tomcat6\webapps
 ```
 
-##build.xml
+## build.xml
 
 ```
 <?xml version = "1.0"?>
@@ -113,13 +113,13 @@ eploy.path = c:\tomcat6\webapps
 
 在上面给出的例子中：
 
-<li>我们首先在 build.properties 文件中声明了存放 Tomcat 的 webapp 文件夹的路径，并用变量 **deploy.path** 来保存。</li>
-<li> 我们声明一个源文件夹来存放 java 文件，并用变量 **src.dir** 来保存。</li>
-<li> 接下来，我们声明另一个源文夹来存放 web 文件，并用变量 **web.dir** 来保存。变量 **javadoc.dir** 用来存储 java 文档，变量 **build.dir** 是用来存储配置输出文件的路径。</li>
-<li>然后，我们给这个 web 应用命名，也就是 **fax** 传真。</li>
-<li>我们还定义了包含 JAR 文件的基本类路径，在上面给出的项目中也就是： WEB-INF/lib 文件夹。</li>
-<li> 我们还将 **build.dir**  中的类文件存放在基本类路径下。</li>
-<li> 这个 Javadoc 目标产生项目所需的文档，以及说明目标使用的 javadoc 文档。</li>
+- 我们首先在 build.properties 文件中声明了存放 Tomcat 的 webapp 文件夹的路径，并用变量 **deploy.path** 来保存。
+- 我们声明一个源文件夹来存放 java 文件，并用变量 **src.dir** 来保存。
+- 接下来，我们声明另一个源文夹来存放 web 文件，并用变量 **web.dir** 来保存。变量 **javadoc.dir** 用来存储 java 文档，变量 **build.dir** 是用来存储配置输出文件的路径。
+- 然后，我们给这个 web 应用命名，也就是 **fax** 传真。
+- 我们还定义了包含 JAR 文件的基本类路径，在上面给出的项目中也就是： WEB-INF/lib 文件夹。
+- 我们还将 **build.dir**  中的类文件存放在基本类路径下。
+- 这个 Javadoc 目标产生项目所需的文档，以及说明目标使用的 javadoc 文档。
 
 上述的例子向我们展示了两个部署目标： **deploy**  和 **deploywar** 。
 

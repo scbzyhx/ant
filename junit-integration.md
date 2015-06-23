@@ -1,6 +1,6 @@
-﻿# JUnit 集成
+# JUnit 集成
 
-JUnit 是一个Java语言的单元测试框架。它易于使用且易于扩展。有许多可用的 JUnit 扩展。如果你对 JUnit 不是很熟悉，你可以在 <a href = "www.junit.org">www.junit.org</a> 网址上下载相关手册。
+JUnit 是一个 Java 语言的单元测试框架。它易于使用且易于扩展。有许多可用的 JUnit 扩展。如果你对 JUnit 不是很熟悉，你可以在 <a href = "www.junit.org">www.junit.org</a> 网址上下载相关手册。
 
 这一章节将向你展示如何用 Ant 来扩展 JUnit 。Ant 直接使用 JUnit 任务。
 
