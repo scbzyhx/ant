@@ -1,6 +1,6 @@
 # Apache Ant 教程
 
-Apache Ant 是由 java 语言开发的工具，由 Apache 软件基金会所提供。 Apache Ant 的配置文件写成 XML 容易维护和书写，而且结构很清晰。
+Apache Ant 是由 Java 语言开发的工具，由 Apache 软件基金会所提供。Apache Ant 的配置文件写成 XML 容易维护和书写，而且结构很清晰。
 
 这个教程将以简单的方式会向你展示如何利用 Apache ANT 来自动地构建和部署过程。在完成本教程的学习以后，你将会发现你已经具备下一阶段学习 Apache Ant 中等水平的专业知识 。
 

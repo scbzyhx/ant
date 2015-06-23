@@ -1,4 +1,4 @@
-﻿# 构建文件
+# 构建文件
 
 一般来说，Ant 的构建文件默认为 build.xml，放在项目顶层目录中。然而，并没有限制构建文件必须命名为 bulid.xml，也并不限制放在项目顶层目录中。你可以将构建文件命名为其他名字，也可以将它放在项目的其他地方。
  
@@ -23,9 +23,9 @@
 The processing instruction target matching "[xX][mM][lL]" is not allowed.
 ```  
 
-错误信息的意思是：处理指令目标匹配 "[xX][mM][lL]" 不被允许。所有的构建文件需要包含项目元素 (project 标签) 和至少一个目标元素 (target 标签)。
+错误信息的意思是：处理指令目标匹配 `"[xX][mM][lL]"` 不被允许。所有的构建文件需要包含项目元素 (project 标签) 和至少一个目标元素 (target 标签)。
 
-构建文件的项目元素 <project> 有3个属性：
+构建文件的项目元素 <project> 有 3 个属性：
 
 <table>
 <tr><td>属性</td><td>描述</td></tr>
@@ -33,7 +33,6 @@ The processing instruction target matching "[xX][mM][lL]" is not allowed.
 <tr><td>默认 (default)</td><td>表示构建脚本默认运行的目标，即制定默认的 target。一个项目 (project) 可以包含多个目标 (target)。（必须）</td></tr>
 <tr><td>基准目录 (basedir)</td><td>表示当该属性没有指定时，使用 Ant 的构件文件的附目录作为基准目录。（可选）</td></tr>
 </table>
-
 
 一个目标 (target) 是一系列你想运行的任务 (tasks)，运行时看成一个单元。在我们的例子中，我们用一个简单的目标来为用户提供一个有信息的消息。
 
@@ -60,7 +59,7 @@ The processing instruction target matching "[xX][mM][lL]" is not allowed.
 构建文件的目标元素有以下属性：
 
 | 属性    |    描述 | 
-| -------- | --------|
+|:-------- |:--------|
 | 目标名 (name)  | 表示目标的名称。（必须） |
 | 依赖 (depends)     |   用于描述 target 之间的依赖关系，若与多个 target 存在依赖关系时，需要以“,”间隔。Ant 会依照 depends 属性中 target 出现的顺序依次执行每个 target。被依赖的 target 会先执行。（可选） |
 | 描述 (description)| 关于 target 功能的简单描述。（可选） |

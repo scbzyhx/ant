@@ -1,15 +1,15 @@
-﻿# 构建项目
+# 构建项目
 
-现在我们已经学习了 Ant 的数据类型，是时候在实际过程中运用所学知识了。在这一章节中，我们将会构建一个项目。这一章节的目的是创建一个 Ant build 文件，该文件能够编译java 源文件和将这些类文件存储在 WEB-INF\classes 文件夹下。
+现在我们已经学习了 Ant 的数据类型，是时候在实际过程中运用所学知识了。在这一章节中，我们将会构建一个项目。这一章节的目的是创建一个 Ant build 文件，该文件能够编译 Java 源文件和将这些类文件存储在 WEB-INF\classes 文件夹下。
 
 考虑接下来构建项目的结构：
 
-<li>数据脚本存储在 **db** 文件夹中。</li>
-<li>java 源文件存储在 **src** 文件夹中。</li>
-<li>images (图像)，js (JavaScript 脚本)，style (css 层叠样式表)存储在 **war** 文件夹中。</li>
-<li>JSPs 文件存储在 **jsp** 文件夹中。</li>
-<li>第三方的 jar 文件存储在 **lib** 文件夹中。</li>
-<li> java 类文件存储在 **WEB-INF\classes** 文件夹中。</li>
+- 数据脚本存储在 **db** 文件夹中。
+- java 源文件存储在 **src** 文件夹中。
+- images (图像)，js (JavaScript 脚本)，style (css 层叠样式表)存储在 **war** 文件夹中。
+- JSPs 文件存储在 **jsp** 文件夹中。
+- 第三方的 jar 文件存储在 **lib** 文件夹中。
+- java 类文件存储在 **WEB-INF\classes** 文件夹中。
  
 学习完本教程的剩余部分后，就能知道这个项目是一个 **Hello World** 传真应用。
 
@@ -82,7 +82,7 @@ C:.
 在上面的例子中：
 
 - **src.dir** 表示这个项目的源文件目录，也就是存储 java 文件的地方。
-- **web.dir** 表示这个项目的 web 文件目录，也就是存储 JSPs 文件，web.xml , css, javascript 以及其它与 web 相关的文件的地方。
+- **web.dir** 表示这个项目的 web 文件目录，也就是存储 JSPs 文件，web.xml，css，javascript 以及其它与 web 相关的文件的地方。
 - **build.dir** 表示该项目的输出文件。
 
 属性也可以引用其它属性。在上面的例子中，**build.dir** 属性引用了 **web.dir** 属性。
@@ -114,7 +114,7 @@ C:.
 </path>
 ```
 
-最后，构建目标构建这些文件。首先，我们创建一个构建目录，如果该目录不存在，我们就执行 javac 命令（具体以 jdk 1.5 作为我们目标的编译环境）。 我们对javac 任务提供源文件夹和类路径，并且通过执行 javac 任务将类文件存放在构建文件夹中。
+最后，构建目标构建这些文件。首先，我们创建一个构建目录，如果该目录不存在，我们就执行 javac 命令（具体以 jdk 1.5 作为我们目标的编译环境）。 我们对 javac 任务提供源文件夹和类路径，并且通过执行 javac 任务将类文件存放在构建文件夹中。
 
 ```
 <target name="build" description="Compile main source tree java files">
